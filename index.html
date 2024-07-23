@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+button{
+    background-color: gray;
+    color: greenyellow;
+}
+body{
+    background-color: bisque;
+}
+    </style>
+</head>
+<body>
+  <h1>hello </h1>
+
+    <div>
+        <input id="n" type="text" placeholder="Name" ><br><br>
+        <input id="a" type="number" placeholder="Age"><br><br>
+        <button id="c">click here</button>
+    </div>
+
+    <script>
+        var nam=document.getElementById("n")
+        var age=document.getElementById("a")
+        var btn=document.querySelector("#c")
+
+        btn.addEventListener("click",function(){
+            var nam_value=nam.value
+            var age_value=age.value
+            var age_day=age_value*365
+            if(nam_value!=="" && age_value<=70 && age_value!=0){
+                document.write(`welcome MR.${nam_value} your age with day's ${age_day}`)
+            }
+            
+        })
+    </script>
+</body>
+</html>
